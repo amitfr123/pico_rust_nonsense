@@ -1,0 +1,23 @@
+[package]
+name = "defmt_printer_based_api"
+version = "0.1.0"
+edition = "2021"
+readme = "README.md"
+license = "MIT OR Apache-2.0"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+defmt-decoder = { version = "0.3.4", features = ["unstable"] }
+log = "0.4"
+anyhow = "1.0.69"
+
+[features]
+# WARNING: Based on an unstable api
+unstable = []
+
+[dev-dependencies]
+clap = { version = "4.0", features = ["derive", "env"] }
+
+[[example]]
+name = "printer"
